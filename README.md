@@ -27,7 +27,11 @@ var editor = EditorJS({
 {
   "type": "simpleImage",
   "data": {
-    "url": "https://example.com/image.jpg",
+    "file": {
+      "url": "https://example.com/image.jpg",
+      "w": 1080,
+      "h": 720
+    },
     "caption": "caption here",
     "withBorder": true,
     "withBackground": false,

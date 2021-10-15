@@ -11,7 +11,11 @@ class SimpleImage {
   constructor({ data, api }) {
     this.api = api
     this.data = {
-      url: data.url || "",
+      file: {
+        url: data.file?.url || "",
+        w: data.file?.w || 0,
+        h: data.file?.h || 0,
+      },
       caption: data.caption || "",
       withBorder: data.withBorder !== undefined ? data.withBorder : false,
       withBackground: data.withBackground !== undefined ? data.withBackground : false,
@@ -38,8 +42,8 @@ class SimpleImage {
     this.wrapper = document.createElement("div")
     this.wrapper.classList.add("simple-image")
 
-    if (this.data && this.data.url) {
-      this._createImage(this.data.url, this.data.caption)
+    if (this.data && this.data.file.url) {
+      this._createImage(this.data.file.url, this.data.caption)
       return this.wrapper
     }
 
@@ -70,20 +74,23 @@ class SimpleImage {
       alert("image url not found")
     }
     this._acceptTuneView()
+    this.data.file = {
+      url: image.src,
+      w: image.width,
+      h: image.height,
+    }
   }
 
   save(blockContent) {
-    const image = blockContent.querySelector("img")
     const caption = blockContent.querySelector("input")
 
     return Object.assign(this.data, {
-      url: image.src,
       caption: caption.value,
     })
   }
 
   validate(savedData) {
-    if (!savedData.url.trim()) {
+    if (!savedData.file.url.trim()) {
       return false
     }
 
