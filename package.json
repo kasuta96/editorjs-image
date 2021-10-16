@@ -1,5 +1,5 @@
 {
-  "name": "trans",
+  "name": "editorjs-image",
   "version": "1.0.0",
   "description": "![](https://badgen.net/badge/Editor.js/v2.0/blue)",
   "main": "webpack.config.js",

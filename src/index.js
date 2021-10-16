@@ -1,26 +1,5 @@
-/**
- * Build styles
- */
-require("./index.css").toString()
+// by @kasuta96
 
-/**
- * @class Trans
- * @classdesc Trans Tool for Editor.js
- * @property {TransData} data - Tool`s input and output data
- * @propert {object} api - Editor.js API instance
- *
- * @typedef {object} TransData
- * @description Trans Tool`s input and output data
- * @property {string} original - trans`s original
- * @property {string} translation - trans`s translation
- * @property {'paragraph'|'header'} option - trans`s option
- *
- * @typedef {object} TransConfig
- * @description Trans Tool`s initial configuration
- * @property {string} originalPlaceholder - placeholder to show in trans`s original input
- * @property {string} translationPlaceholder - placeholder to show in trans`s translation input
- * @property {'paragraph'|'header'} defaultOption - option to use as default
- */
 class SimpleImage {
   static get toolbox() {
     return {
