@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kasuta96/quote.git"
+    "url": "git+https://github.com/kasuta96/editorjs-image.git"
   },
   "keywords": [],
   "author": "kasuta96",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kasuta96/quote/issues"
+    "url": "https://github.com/kasuta96/editorjs-image/issues"
   },
-  "homepage": "https://github.com/kasuta96/quote#readme",
+  "homepage": "https://github.com/kasuta96/editorjs-image#readme",
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
